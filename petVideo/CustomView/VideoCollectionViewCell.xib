@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="VideoCollectionViewCell" customModule="petVideo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="196" height="250"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="196" height="250"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C5T-Lg-h3A">
+                        <rect key="frame" x="0.0" y="0.0" width="196" height="250"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IQC-8f-ckZ">
+                                <rect key="frame" x="-5" y="-6" width="204" height="165"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3or-I8-ylc">
+                                <rect key="frame" x="8" y="167" width="24" height="24"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcl-Zi-20G">
+                                <rect key="frame" x="44" y="167" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdS-at-Fe3">
+                                <rect key="frame" x="8" y="196" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZq-Fa-Nme">
+                                <rect key="frame" x="0.0" y="0.0" width="196" height="159"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="clickPreImageView:" destination="gTV-IL-0wX" eventType="touchUpInside" id="OyS-Ev-3ap"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pcl-Zi-20G" firstAttribute="leading" secondItem="3or-I8-ylc" secondAttribute="trailing" constant="12" id="7Zg-W9-h1t"/>
+                            <constraint firstItem="3or-I8-ylc" firstAttribute="top" secondItem="IQC-8f-ckZ" secondAttribute="bottom" constant="8" id="DfC-g3-no8"/>
+                            <constraint firstItem="3or-I8-ylc" firstAttribute="leading" secondItem="C5T-Lg-h3A" secondAttribute="leading" constant="8" id="Q6D-XH-BWt"/>
+                            <constraint firstAttribute="trailing" secondItem="PdS-at-Fe3" secondAttribute="trailing" constant="8" id="Rmk-lK-f0Z"/>
+                            <constraint firstItem="PdS-at-Fe3" firstAttribute="leading" secondItem="C5T-Lg-h3A" secondAttribute="leading" constant="8" id="a2B-gj-OMs"/>
+                            <constraint firstItem="PdS-at-Fe3" firstAttribute="top" secondItem="3or-I8-ylc" secondAttribute="bottom" constant="5" id="aYw-WX-xGz"/>
+                            <constraint firstAttribute="bottom" secondItem="PdS-at-Fe3" secondAttribute="bottom" constant="8" id="p9f-AW-XKE"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="196" height="250"/>
+            <connections>
+                <outlet property="detailText" destination="PdS-at-Fe3" id="QJJ-b5-0uz"/>
+                <outlet property="headImageView" destination="3or-I8-ylc" id="1Pv-Q4-euv"/>
+                <outlet property="name" destination="pcl-Zi-20G" id="4Jc-DH-VU5"/>
+                <outlet property="preImageView" destination="IQC-8f-ckZ" id="mTe-pc-u7A"/>
+            </connections>
+            <point key="canvasLocation" x="169.59999999999999" y="138.53073463268368"/>
+        </collectionViewCell>
+    </objects>
+</document>
