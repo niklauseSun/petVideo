@@ -21,7 +21,14 @@ class MyViewController: UIViewController {
     lazy var headImageBtn: UIButton = {
         let v = UIButton()
         v.layer.cornerRadius = 60
-        
+        v.addTarget(self, action: #selector(clickMyHeadImage), for: .touchUpInside)
+        return v
+    }()
+    
+    lazy var headImageView: UIImageView = {
+        let v = UIImageView()
+        v.layer.cornerRadius = 60
+        v.image = UIImage(named: "default_head_image")
         return v
     }()
     
@@ -79,10 +86,11 @@ class MyViewController: UIViewController {
     }
 }
 
-// ui
+// UI
 extension MyViewController {
     func setupView() -> Void {
         self.view.backgroundColor = UIColor.white
+        addHeadImage()
         addHeadImageBtn()
         addMyFav()
         addMyLikeBtn()
@@ -95,6 +103,15 @@ extension MyViewController {
         self.view.addSubview(nameLabel)
         nameLabel.snp.makeConstraints { (make) in
             make.center.equalTo(self.view)
+        }
+    }
+    
+    func addHeadImage() -> Void {
+        self.view.addSubview(headImageView)
+        headImageView.snp.makeConstraints { (make) in
+            make.height.width.equalTo(120)
+            make.top.equalTo(self.view.snp.top).offset(60)
+            make.centerX.equalTo(self.view.snp.centerX)
         }
     }
     
@@ -151,6 +168,10 @@ extension MyViewController {
 // action
 extension MyViewController {
     @objc
+    func clickMyHeadImage(_ sender: UIButton) {
+        print("click head")
+    }
+    @objc
     func clickMyFavAction(_ sender: UIButton) {
         print("click fav")
     }
@@ -172,5 +193,4 @@ extension MyViewController {
         let personal = PeronalDataViewController()
         self.navigationController?.pushViewController(personal, animated: true)
     }
-    
 }

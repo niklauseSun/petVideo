@@ -9,7 +9,7 @@
 import UIKit
 
 class CustomTabBarController: UITabBarController {
-    fileprivate let tabBarImageNames = ["tb_home", "tb_person","tes1","test1","test3"]
+    fileprivate let tabBarImageNames = ["home", "rank","add","friend","my"]
     fileprivate let tabBarTitles = ["首页", "排行", "添加", "宠友", "我"]
 
     override func viewDidLoad() {
@@ -44,17 +44,10 @@ class CustomTabBarController: UITabBarController {
     
     fileprivate func addDefaultChildViewControllers() {
         let vc1 = HomeViewController()
-//        vc1.view.backgroundColor = UIColor.white
-        
         let vc2 = RankViewController()
-//        vc2.view.backgroundColor = UIColor.lightGray
         let vc3 = AddViewController()
-        
         let vc4 = FriendViewController()
-        
         let vc5 = MyViewController()
-//        let vcNav = UINavigationController(rootViewController: vc5)
-//        vcNav.isNavigationBarHidden = true
         
         viewControllers = [vc1, vc2, vc3, vc4, vc5]
     }
@@ -71,22 +64,10 @@ class CustomTabBarController: UITabBarController {
         
         // 遍历子页面
         for (index, singleVC) in containViewControllers.enumerated() {
+            singleVC.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
             singleVC.tabBarItem.image = UIImage(named: tabBarImageNames[index])
             singleVC.tabBarItem.selectedImage = UIImage(named: tabBarImageNames[index] + "_selected")
             singleVC.tabBarItem.title = tabBarTitles[index]
         }
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
