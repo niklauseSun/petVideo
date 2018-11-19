@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="petVideo" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDL-jh-1Jv">
+                    <rect key="frame" x="25" y="80" width="52" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Web-B8-pNg">
+                    <rect key="frame" x="25" y="141" width="35" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SfM-rx-2Bu">
+                    <rect key="frame" x="102" y="75.5" width="248" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="UserName:" destination="-1" eventType="editingDidEnd" id="yRc-dh-dIq"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MCL-wb-3N1">
+                    <rect key="frame" x="102" y="136.5" width="248" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="Password:" destination="-1" eventType="editingDidEnd" id="hs8-JO-sfQ"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2G-OO-bWa">
+                    <rect key="frame" x="30" y="211.5" width="315" height="50"/>
+                    <color key="backgroundColor" red="0.0" green="0.46529688073223285" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="kBu-oj-vi3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                    <state key="normal" title="登录"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="LoginAction:" destination="-1" eventType="touchUpInside" id="ImN-rE-h8c"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oih-iC-5J9">
+                    <rect key="frame" x="30" y="286.5" width="31" height="30"/>
+                    <state key="normal" title="注册"/>
+                    <connections>
+                        <action selector="RegisterAction:" destination="-1" eventType="touchUpInside" id="7LG-Xs-PAB"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="A2G-OO-bWa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7Eb-VS-e1Q"/>
+                <constraint firstItem="oih-iC-5J9" firstAttribute="leading" secondItem="A2G-OO-bWa" secondAttribute="leading" id="9AT-Di-4fJ"/>
+                <constraint firstItem="A2G-OO-bWa" firstAttribute="top" secondItem="MCL-wb-3N1" secondAttribute="bottom" constant="45" id="9zF-2R-j3d"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SfM-rx-2Bu" secondAttribute="trailing" constant="25" id="AAe-Vy-cCV"/>
+                <constraint firstItem="A2G-OO-bWa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Cpm-vT-oBY"/>
+                <constraint firstItem="SfM-rx-2Bu" firstAttribute="centerY" secondItem="NDL-jh-1Jv" secondAttribute="centerY" id="D8z-KL-zhI"/>
+                <constraint firstItem="Web-B8-pNg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="DEv-o8-0sn"/>
+                <constraint firstItem="Web-B8-pNg" firstAttribute="top" secondItem="NDL-jh-1Jv" secondAttribute="bottom" constant="40" id="VFy-4A-AoM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="A2G-OO-bWa" secondAttribute="trailing" constant="30" id="dNI-9K-Qq1"/>
+                <constraint firstItem="oih-iC-5J9" firstAttribute="top" secondItem="A2G-OO-bWa" secondAttribute="bottom" constant="25" id="khP-tx-UIw"/>
+                <constraint firstItem="MCL-wb-3N1" firstAttribute="leading" secondItem="SfM-rx-2Bu" secondAttribute="leading" id="lWD-hE-Ghi"/>
+                <constraint firstItem="MCL-wb-3N1" firstAttribute="trailing" secondItem="SfM-rx-2Bu" secondAttribute="trailing" id="rXw-WD-rjw"/>
+                <constraint firstItem="SfM-rx-2Bu" firstAttribute="leading" secondItem="NDL-jh-1Jv" secondAttribute="trailing" constant="25" id="sya-6c-6I9"/>
+                <constraint firstItem="NDL-jh-1Jv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="xbA-ff-eI2"/>
+                <constraint firstItem="NDL-jh-1Jv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="xvh-ie-oNr"/>
+                <constraint firstItem="MCL-wb-3N1" firstAttribute="centerY" secondItem="Web-B8-pNg" secondAttribute="centerY" id="za4-gn-LEe"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.40000000000001" y="154.27286356821591"/>
+        </view>
+    </objects>
+</document>

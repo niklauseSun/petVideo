@@ -10,6 +10,8 @@
 		128B5DCB0423DFB3C2B32247 /* Pods_petVideoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAE7314C74F49E4AA47AED2 /* Pods_petVideoTests.framework */; };
 		3686D60BC1E622C302D626CE /* Pods_petVideoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E906E08921F3432515E20925 /* Pods_petVideoUITests.framework */; };
 		901327B957DAB3D29FD9863F /* Pods_petVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15EB58735886CC94D528C90 /* Pods_petVideo.framework */; };
+		A0174CBC21A2BC390064FD21 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0174CBA21A2BC390064FD21 /* LoginViewController.swift */; };
+		A0174CBD21A2BC390064FD21 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0174CBB21A2BC390064FD21 /* LoginViewController.xib */; };
 		A08601FF21994E90001B7AF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08601FE21994E90001B7AF7 /* AppDelegate.swift */; };
 		A086020121994E90001B7AF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086020021994E90001B7AF7 /* ViewController.swift */; };
 		A086020421994E90001B7AF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A086020221994E90001B7AF7 /* Main.storyboard */; };
@@ -60,6 +62,8 @@
 		1B8658FE546F282D1FB2CDBF /* Pods-petVideo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petVideo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-petVideo/Pods-petVideo.debug.xcconfig"; sourceTree = "<group>"; };
 		2D01A3544E56524FF532A2B7 /* Pods-petVideoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petVideoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-petVideoUITests/Pods-petVideoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		405435B5B77BE9914DB4E918 /* Pods-petVideoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-petVideoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-petVideoTests/Pods-petVideoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A0174CBA21A2BC390064FD21 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A0174CBB21A2BC390064FD21 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		A08601FB21994E90001B7AF7 /* petVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = petVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08601FE21994E90001B7AF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A086020021994E90001B7AF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +251,8 @@
 			children = (
 				A08602402199614C001B7AF7 /* MyViewController.swift */,
 				A086026F2199858F001B7AF7 /* PeronalDataViewController.swift */,
+				A0174CBA21A2BC390064FD21 /* LoginViewController.swift */,
+				A0174CBB21A2BC390064FD21 /* LoginViewController.xib */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -394,6 +400,7 @@
 				A086027F219A6A8B001B7AF7 /* add_select.png in Resources */,
 				A0860282219A6A8B001B7AF7 /* home.png in Resources */,
 				A086020921994E91001B7AF7 /* LaunchScreen.storyboard in Resources */,
+				A0174CBD21A2BC390064FD21 /* LoginViewController.xib in Resources */,
 				A086020621994E91001B7AF7 /* Assets.xcassets in Resources */,
 				A086027E219A6A8B001B7AF7 /* home_select.png in Resources */,
 				A0860281219A6A8B001B7AF7 /* friend.png in Resources */,
@@ -520,6 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0174CBC21A2BC390064FD21 /* LoginViewController.swift in Sources */,
 				A086023721995F5E001B7AF7 /* HomeViewController.swift in Sources */,
 				A086020121994E90001B7AF7 /* ViewController.swift in Sources */,
 				A086023B21995F83001B7AF7 /* AddViewController.swift in Sources */,

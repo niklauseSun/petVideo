@@ -170,6 +170,8 @@ extension MyViewController {
     @objc
     func clickMyHeadImage(_ sender: UIButton) {
         print("click head")
+        let login = LoginViewController()
+        self.navigationController?.pushViewController(login, animated: true)
     }
     @objc
     func clickMyFavAction(_ sender: UIButton) {
